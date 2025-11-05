@@ -15,7 +15,7 @@ void main(){
     clientSocket= socket(PF_INET,SOCK_STREAM,0); //create socket
     /* pf_init = protocol family , sock_stream is for tcp ,sock_datagram for udp , 0 for any best protocol*/
     printf("client socket created successfully\n");
-    memset(&serverAddr ,"\0" ,sizeof(serverAddr)); //initialize server address structure with null value
+    memset(&serverAddr ,'\0' ,sizeof(serverAddr)); //initialize server address structure with null value
     serverAddr.sin_family=AF_INET;
     serverAddr.sin_port=htons(PORT); //host to network short conversion for port number
     serverAddr.sin_addr.s_addr=inet_addr("127.0.0.1"); //convert ip address to binary format and store in server address structure
