@@ -19,11 +19,11 @@ This project helps understand the basic flow of TCP communication.
 ---Flow of Execution---
 
 1.Server->
-      Creates a socket
-      Binds it to an IP & port
-      Listens for incoming connections
-      Accepts a client
-      Receives and sends messages
+      Creates a socket.
+      Binds it to an IP & port.
+      Listens for incoming connections.
+      Accepts a client.
+      Receives and sends messages.
 
 2.Client->
 
