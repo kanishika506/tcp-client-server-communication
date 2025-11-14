@@ -10,6 +10,6 @@ print("UDP Server is running and waiting for messages...")
 while True:
     data, addr = sock.recvfrom(1024)   # Receive data from client
     print(str(data))
-    msg=bytes("HELLO UDP CLIENT").encode('utf-8')
+    msg="HELLO UDP CLIENT".encode('utf-8')
     sock.sendto(msg,addr)
     
