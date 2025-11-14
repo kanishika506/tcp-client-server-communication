@@ -1,11 +1,13 @@
 import socket
 
-client_socket=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) #.af_inet for ipv4 ,sock_dgram for connectionless udp
+# Create UDP socket
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-msg="HELLO ! UDP SERVER"
+server_address = ("127.0.0.1" 9999)
 
-client_socket.sendto(msg.encode('utf-8'),('127.0.0.1',12345))
-data,addr=client_socket.recvfrom(1024)
-print("SERVER SAYS:")
-print(str(data))
-client_socket.close()
+while True:
+    msg = input("Enter message for server: ")
+    client_socket.sendto(msg.encode(), server_address)  # Send msg to server
+
+    data, server = client_socket.recvfrom(1024)         # Receive reply
+    print("Server:", data.decode())
