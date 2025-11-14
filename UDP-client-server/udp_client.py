@@ -3,7 +3,7 @@ import socket
 # Create UDP socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ("127.0.0.1" 9999)
+server_address = ('127.0.0.1', 9999)
 
 while True:
     msg = input("Enter message for server: ")
